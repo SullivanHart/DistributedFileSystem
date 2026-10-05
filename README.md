@@ -1,7 +1,46 @@
 # Distributed File System
 
 
-## Installation 
+## Installation
+
+### Requirements
+
+- Docker Engine
+- Docker Compose v2
+
+
+### Linux setup (Ubuntu)
+
+If Docker and Compose are not already installed:
+
+```
+sudo apt update
+sudo apt install docker.io docker-compose-v2
+```
+
+Optional: allow Docker commands without `sudo`:
+
+```
+sudo usermod -aG docker "$USER"
+newgrp docker
+```
+
+The Docker group grants administrative access through Docker. If you skip this step, prefix the Docker commands below with `sudo`.
+
+### Start the system
+
+From the project directory:
+
+```bash
+docker compose up -d
+docker compose ps
+```
+
+### Stop the system
+
+```bash
+docker compose down
+```
 
 ## About
 
